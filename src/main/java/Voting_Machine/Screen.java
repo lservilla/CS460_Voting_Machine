@@ -22,6 +22,8 @@ public class Screen extends Application{
     @FXML
     public Pane voterCard;
     @FXML
+    public Pane fakeCard;
+    @FXML
     public Rectangle insertedCard;
     @FXML
     public Rectangle dropZone;
@@ -61,8 +63,10 @@ public class Screen extends Application{
             cardIn = true;
             if(Objects.equals(n.getId(), "adminCard")){
                 ID = 1;
-            } else if(Objects.equals(n.getId(), "voterCard")){
+            } else if (Objects.equals(n.getId(), "voterCard")){
                 ID = 2;
+            } else if (Objects.equals(n.getId(), "fakeCard")){
+                ID = 0;
             }
         }
     }
@@ -74,8 +78,10 @@ public class Screen extends Application{
 
         if (ID == 1){
             adminCard.setVisible(true);
-        }else if (ID == 2){
+        } else if (ID == 2){
             voterCard.setVisible(true);
+        } else if (ID == 0){
+            fakeCard.setVisible(true);
         }
     }
 }
