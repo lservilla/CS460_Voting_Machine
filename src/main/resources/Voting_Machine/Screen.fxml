@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Voting_Machine.Screen">
+<AnchorPane prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Voting_Machine.Voting_Manager">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#707070" height="709.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#takeCardOut" stroke="BLACK" strokeType="INSIDE" width="954.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfeff" height="504.0" layoutX="555.0" layoutY="47.0" stroke="BLACK" strokeType="INSIDE" width="392.0" />
