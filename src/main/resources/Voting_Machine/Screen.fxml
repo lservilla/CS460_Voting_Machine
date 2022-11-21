@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Voting_Machine.Screen">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#707070" height="709.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#takeCardOut" stroke="BLACK" strokeType="INSIDE" width="954.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfeff" height="504.0" layoutX="555.0" layoutY="47.0" stroke="BLACK" strokeType="INSIDE" width="392.0" />
+      <Text layoutX="567.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Print Ballot Info Here" wrappingWidth="368.5">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="622.0" layoutX="36.0" layoutY="47.0" stroke="BLACK" strokeType="INSIDE" width="496.0" />
+      <Rectangle id="dropZone" fx:id="dropZone" arcHeight="5.0" arcWidth="5.0" fill="#95db9c" height="107.0" layoutX="610.0" layoutY="573.0" opacity="0.31" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="282.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0f0f0f" height="11.0" layoutX="647.0" layoutY="644.0" stroke="BLACK" strokeType="INSIDE" width="201.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2" height="36.0" layoutX="640.0" layoutY="590.0" stroke="BLACK" strokeType="INSIDE" width="215.0" />
+      <Text layoutX="640.0" layoutY="612.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert Voting Card Below" textAlignment="CENTER" wrappingWidth="215.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfeff" height="74.0" layoutX="132.0" layoutY="86.0" stroke="BLACK" strokeType="INSIDE" width="303.0" />
+      <Text layoutX="136.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is being voted on goes here" textAlignment="CENTER" wrappingWidth="297.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fa" height="385.0" layoutX="238.0" layoutY="176.0" stroke="BLACK" strokeType="INSIDE" width="201.0" />
+      <Pane layoutX="129.0" layoutY="190.0" prefHeight="24.0" prefWidth="76.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 1" textAlignment="CENTER" wrappingWidth="76.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="129.0" layoutY="239.0" prefHeight="24.0" prefWidth="76.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 2" textAlignment="CENTER" wrappingWidth="76.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="129.0" layoutY="287.0" prefHeight="24.0" prefWidth="76.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 3" textAlignment="CENTER" wrappingWidth="76.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="129.0" layoutY="335.0" prefHeight="24.0" prefWidth="76.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 4" textAlignment="CENTER" wrappingWidth="76.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="129.0" layoutY="384.0" prefHeight="24.0" prefWidth="76.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 5" textAlignment="CENTER" wrappingWidth="76.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="129.0" layoutY="432.0" prefHeight="24.0" prefWidth="76.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 6" textAlignment="CENTER" wrappingWidth="76.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="132.0" layoutY="501.0" prefHeight="28.0" prefWidth="76.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff5555" height="24.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Text layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cancle" textAlignment="CENTER" wrappingWidth="76.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="132.0" layoutY="534.0" prefHeight="24.0" prefWidth="76.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#48df66" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Text layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Okay" textAlignment="CENTER" wrappingWidth="76.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="241.0" layoutY="180.0" stroke="#0000004d" strokeType="INSIDE" width="195.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="241.0" layoutY="229.0" stroke="#0000004d" strokeType="INSIDE" width="195.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="241.0" layoutY="277.0" stroke="#0000004d" strokeType="INSIDE" width="195.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="241.0" layoutY="325.0" stroke="#0000004d" strokeType="INSIDE" width="195.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="241.0" layoutY="374.0" stroke="#0000004d" strokeType="INSIDE" width="195.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="241.0" layoutY="422.0" stroke="#0000004d" strokeType="INSIDE" width="195.0" />
+      <Text layoutX="249.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="179.5">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="249.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="179.5">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="249.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="179.5">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="249.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="179.5">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="249.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="179.5">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="249.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="179.5">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Pane layoutX="1069.0" layoutY="573.0" prefHeight="107.0" prefWidth="111.0">
+         <children>
+            <Circle fill="#d30202" layoutX="56.0" layoutY="54.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" />
+            <Text layoutX="15.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TAMPER" textAlignment="CENTER" wrappingWidth="82.7294921875" />
+         </children>
+      </Pane>
+      <Rectangle id="insertedCard" fx:id="insertedCard" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="16.0" layoutX="648.0" layoutY="647.0" onMouseClicked="#takeCardOut" stroke="BLACK" strokeType="INSIDE" visible="false" width="200.0" />
+      <Pane id="adminCard" fx:id="adminCard" layoutX="1021.0" layoutY="152.0" onMouseDragged="#cardDrag" onMouseReleased="#cardDrop" prefHeight="135.0" prefWidth="207.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="135.0" stroke="BLACK" strokeType="INSIDE" width="207.0" />
+            <ImageView fitHeight="89.0" fitWidth="100.0" layoutX="10.0" layoutY="7.0">
+               <image>
+                  <Image url="@vote.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0f0f0f" height="24.0" layoutY="103.0" stroke="BLACK" strokeType="INSIDE" width="207.0" />
+            <Text layoutX="139.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" textAlignment="CENTER" wrappingWidth="53.78662109375" />
+         </children>
+      </Pane>
+      <Pane id="voterCard" fx:id="voterCard" layoutX="1021.0" layoutY="308.0" onMouseDragged="#cardDrag" onMouseReleased="#cardDrop" prefHeight="135.0" prefWidth="207.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="135.0" stroke="BLACK" strokeType="INSIDE" width="207.0" />
+            <ImageView fitHeight="89.0" fitWidth="100.0" layoutX="10.0" layoutY="7.0">
+               <image>
+                  <Image url="@vote.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0f0f0f" height="24.0" layoutY="103.0" stroke="BLACK" strokeType="INSIDE" width="207.0" />
+            <Text layoutX="139.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voter" textAlignment="CENTER" wrappingWidth="53.78662109375" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
