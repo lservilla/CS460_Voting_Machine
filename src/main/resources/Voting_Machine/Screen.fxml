@@ -9,11 +9,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Voting_Machine.Voting_Manager">
+<AnchorPane prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Voting_Machine.VotingManager">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#707070" height="709.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#takeCardOut" stroke="BLACK" strokeType="INSIDE" width="954.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfeff" height="504.0" layoutX="555.0" layoutY="47.0" stroke="BLACK" strokeType="INSIDE" width="392.0" />
-      <Text layoutX="567.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Print Ballot Info Here" wrappingWidth="368.5">
+      <Text layoutX="567.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="368.5">
          <font>
             <Font size="12.0" />
          </font>
@@ -28,7 +28,7 @@
          </font>
       </Text>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfeff" height="74.0" layoutX="132.0" layoutY="86.0" stroke="BLACK" strokeType="INSIDE" width="303.0" />
-      <Text layoutX="136.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is being voted on goes here" textAlignment="CENTER" wrappingWidth="297.0">
+      <Text layoutX="136.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="297.0">
          <font>
             <Font size="12.0" />
          </font>
@@ -120,32 +120,32 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="241.0" layoutY="325.0" stroke="#0000004d" strokeType="INSIDE" width="195.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="241.0" layoutY="374.0" stroke="#0000004d" strokeType="INSIDE" width="195.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="44.0" layoutX="241.0" layoutY="422.0" stroke="#0000004d" strokeType="INSIDE" width="195.0" />
-      <Text layoutX="249.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="179.5">
+      <Text layoutX="249.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.5">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Text layoutX="249.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="179.5">
+      <Text layoutX="249.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.5">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Text layoutX="249.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="179.5">
+      <Text layoutX="249.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.5">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Text layoutX="249.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="179.5">
+      <Text layoutX="249.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.5">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Text layoutX="249.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="179.5">
+      <Text layoutX="249.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.5">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Text layoutX="249.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="179.5">
+      <Text layoutX="249.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="179.5">
          <font>
             <Font size="10.0" />
          </font>

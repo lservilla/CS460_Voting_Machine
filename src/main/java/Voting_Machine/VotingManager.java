@@ -15,8 +15,15 @@ import java.util.Objects;
 
 
 
-public class Voting_Manager extends Application{
-
+public class VotingManager extends Application{
+    enum Machine_State{
+        WAITING,
+        VOTING_ACTIVE,
+        VOTING_PAUSED,
+        VOTING_DISABLED,
+        FAILURE
+    }
+    Machine_State state = Machine_State.WAITING;
     @FXML
     public Pane adminCard;
     @FXML
@@ -34,11 +41,25 @@ public class Voting_Manager extends Application{
 
     @Override
     public void start(Stage stage) throws Exception {
+//      Starting watch dog thread used to catch failures
+        Thread watchdog = new Thread(){
+            public void run(){
+                try {
+                    FailureMonitor failure_monitor =
+                            new FailureMonitor();
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        };
+        watchdog.start();
+
         Parent rootOpener = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Screen.fxml")));
         Scene sceneOpener = new Scene(rootOpener,1300,750);
         stage.setTitle("Voting Machine");
         stage.setScene(sceneOpener);
         stage.show();
+
     }
 
     @FXML

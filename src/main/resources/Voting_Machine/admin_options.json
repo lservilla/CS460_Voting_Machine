@@ -1,0 +1,11 @@
+{
+  "header": "Press one of the following options to either check the ballot or change machine state.",
+  "options": {
+    "option1": "Check Ballot",
+    "option2": "Start Voting",
+    "option3": "Pause Voting",
+    "option4": "End Voting",
+    "option5": "",
+    "option6": ""
+  }
+}
