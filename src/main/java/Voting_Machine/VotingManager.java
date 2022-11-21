@@ -84,6 +84,7 @@ public class VotingManager extends Application{
             cardIn = true;
             if(Objects.equals(n.getId(), "adminCard")){
                 ID = 1;
+
             } else if (Objects.equals(n.getId(), "voterCard")){
                 ID = 2;
             } else if (Objects.equals(n.getId(), "fakeCard")){

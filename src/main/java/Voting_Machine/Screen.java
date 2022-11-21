@@ -1,8 +1,26 @@
 package Voting_Machine;
 
-import javafx.application.Application;
-
 public class Screen {
+
+    enum Status{
+        WAITING,
+        DECIDED
+    }
+
+    void displayFrame(){
+
+    }
+
+    int getSelection(){
+
+        return 0;
+    }
+
+    Status status(){
+
+        return null;
+    }
+
 
 
 }
