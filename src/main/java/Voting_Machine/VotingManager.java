@@ -13,8 +13,6 @@ import javafx.stage.Stage;
 import java.util.Objects;
 
 
-
-
 public class VotingManager extends Application{
     enum Machine_State{
         WAITING,
