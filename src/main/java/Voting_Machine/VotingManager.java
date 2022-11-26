@@ -259,6 +259,8 @@ public class VotingManager extends Application{
             case "cancel":
 
             case "okay":
+
+            case "tamper":
         }
     }
 }
