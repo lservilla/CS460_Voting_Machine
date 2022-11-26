@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import java.util.Objects;
 
@@ -32,6 +33,40 @@ public class VotingManager extends Application{
     public Rectangle insertedCard;
     @FXML
     public Rectangle dropZone;
+//    Buttons for selecting options
+    @FXML
+    public Pane button_1;
+    @FXML
+    public Pane button_2;
+    @FXML
+    public Pane button_3;
+    @FXML
+    public Pane button_4;
+    @FXML
+    public Pane button_5;
+    @FXML
+    public Pane button_6;
+    @FXML
+    public Pane cancel;
+    @FXML
+    public Pane okay;
+//    Text that shows the heading, print_out, and options
+    @FXML
+    public Text header;
+    @FXML
+    public Text print_out;
+    @FXML
+    public Text option_txt_1;
+    @FXML
+    public Text option_txt_2;
+    @FXML
+    public Text option_txt_3;
+    @FXML
+    public Text option_txt_4;
+    @FXML
+    public Text option_txt_5;
+    @FXML
+    public Text option_txt_6;
 
 //    Temporary until Voter_ID has functions
     public boolean cardIn = false;
