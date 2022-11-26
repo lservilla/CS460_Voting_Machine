@@ -34,9 +34,9 @@
          </font>
       </Text>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fa" height="385.0" layoutX="238.0" layoutY="176.0" stroke="BLACK" strokeType="INSIDE" width="201.0" />
-      <Pane id="button_1" fx:id="button_1" layoutX="129.0" layoutY="190.0" prefHeight="24.0" prefWidth="76.0">
+      <Pane id="button_1" fx:id="button_1" layoutX="129.0" layoutY="190.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle fx:id="color_1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 1" textAlignment="CENTER" wrappingWidth="76.0">
                <font>
                   <Font size="10.0" />
@@ -44,9 +44,9 @@
             </Text>
          </children>
       </Pane>
-      <Pane id="button_2" fx:id="button_2" layoutX="129.0" layoutY="239.0" prefHeight="24.0" prefWidth="76.0">
+      <Pane id="button_2" fx:id="button_2" layoutX="129.0" layoutY="239.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle fx:id="color_2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 2" textAlignment="CENTER" wrappingWidth="76.0">
                <font>
                   <Font size="10.0" />
@@ -54,9 +54,9 @@
             </Text>
          </children>
       </Pane>
-      <Pane id="button_3" fx:id="button_3" layoutX="129.0" layoutY="287.0" prefHeight="24.0" prefWidth="76.0">
+      <Pane id="button_3" fx:id="button_3" layoutX="129.0" layoutY="287.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle fx:id="color_3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 3" textAlignment="CENTER" wrappingWidth="76.0">
                <font>
                   <Font size="10.0" />
@@ -64,9 +64,9 @@
             </Text>
          </children>
       </Pane>
-      <Pane id="button_4" fx:id="button_4" layoutX="129.0" layoutY="335.0" prefHeight="24.0" prefWidth="76.0">
+      <Pane id="button_4" fx:id="button_4" layoutX="129.0" layoutY="335.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle fx:id="color_4" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 4" textAlignment="CENTER" wrappingWidth="76.0">
                <font>
                   <Font size="10.0" />
@@ -74,9 +74,9 @@
             </Text>
          </children>
       </Pane>
-      <Pane id="button_" fx:id="button_5" layoutX="129.0" layoutY="384.0" prefHeight="24.0" prefWidth="76.0">
+      <Pane id="button_5" fx:id="button_5" layoutX="129.0" layoutY="384.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle fx:id="color_5" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 5" textAlignment="CENTER" wrappingWidth="76.0">
                <font>
                   <Font size="10.0" />
@@ -84,9 +84,9 @@
             </Text>
          </children>
       </Pane>
-      <Pane id="button_6" fx:id="button_6" layoutX="129.0" layoutY="432.0" prefHeight="24.0" prefWidth="76.0">
+      <Pane id="button_6" fx:id="button_6" layoutX="129.0" layoutY="432.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle fx:id="color_6" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 6" textAlignment="CENTER" wrappingWidth="76.0">
                <font>
                   <Font size="10.0" />
@@ -94,9 +94,9 @@
             </Text>
          </children>
       </Pane>
-      <Pane id="cancel" fx:id="cancel" layoutX="132.0" layoutY="501.0" prefHeight="28.0" prefWidth="76.0">
+      <Pane id="cancel" fx:id="cancel" layoutX="132.0" layoutY="501.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="28.0" prefWidth="76.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff5555" height="24.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle fx:id="color_7" arcHeight="5.0" arcWidth="5.0" fill="#ff5555" height="24.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Text layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cancel" textAlignment="CENTER" wrappingWidth="76.0">
                <font>
                   <Font size="10.0" />
@@ -104,9 +104,9 @@
             </Text>
          </children>
       </Pane>
-      <Pane id="okay" fx:id="okay" layoutX="132.0" layoutY="534.0" prefHeight="24.0" prefWidth="76.0">
+      <Pane id="okay" fx:id="okay" layoutX="132.0" layoutY="534.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#48df66" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle fx:id="color_8" arcHeight="5.0" arcWidth="5.0" fill="#48df66" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Text layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Okay" textAlignment="CENTER" wrappingWidth="76.0">
                <font>
                   <Font size="10.0" />
@@ -150,9 +150,9 @@
             <Font size="10.0" />
          </font>
       </Text>
-      <Pane layoutX="1069.0" layoutY="573.0" prefHeight="107.0" prefWidth="111.0">
+      <Pane id="tamper" fx:id="tamper" layoutX="1069.0" layoutY="573.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="107.0" prefWidth="111.0">
          <children>
-            <Circle fill="#d30202" layoutX="56.0" layoutY="54.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="color_9" fill="#d30202" layoutX="56.0" layoutY="54.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" radius="55.0" stroke="BLACK" strokeType="INSIDE" />
             <Text layoutX="15.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TAMPER" textAlignment="CENTER" wrappingWidth="82.7294921875" />
          </children>
       </Pane>
