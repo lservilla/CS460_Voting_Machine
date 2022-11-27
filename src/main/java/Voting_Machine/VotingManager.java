@@ -12,6 +12,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import java.util.Objects;
@@ -244,23 +246,23 @@ public class VotingManager extends Application{
         Node n = (Node)mouseEvent.getSource();
 
         switch (n.getId()){
-            case "button_1":
+            case "button_1" -> option_txt_1.setFill(Color.RED);
 
-            case "button_2":
+            case "button_2" -> option_txt_2.setFill(Color.RED);
 
-            case "button_3":
+            case "button_3" -> option_txt_3.setFill(Color.RED);
 
-            case "button_4":
+            case "button_4" -> option_txt_4.setFill(Color.RED);
 
-            case "button_5":
+            case "button_5" -> option_txt_5.setFill(Color.RED);
 
-            case "button_6":
+            case "button_6" -> option_txt_6.setFill(Color.RED);
 
-            case "cancel":
+            case "cancel" -> System.out.println("cancel!");
 
-            case "okay":
+            case "okay" -> System.out.println("okay!");
 
-            case "tamper":
+            case "tamper" -> System.out.println("tamper!");
         }
     }
 }
