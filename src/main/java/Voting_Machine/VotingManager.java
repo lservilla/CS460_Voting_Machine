@@ -246,17 +246,59 @@ public class VotingManager extends Application{
         Node n = (Node)mouseEvent.getSource();
 
         switch (n.getId()){
-            case "button_1" -> option_txt_1.setFill(Color.RED);
+            case "button_1" -> {
+                option_txt_1.setFill(Color.RED);
+                option_txt_2.setFill(Color.BLACK);
+                option_txt_3.setFill(Color.BLACK);
+                option_txt_4.setFill(Color.BLACK);
+                option_txt_5.setFill(Color.BLACK);
+                option_txt_6.setFill(Color.BLACK);
+            }
 
-            case "button_2" -> option_txt_2.setFill(Color.RED);
+            case "button_2" -> {
+                option_txt_1.setFill(Color.BLACK);
+                option_txt_2.setFill(Color.RED);
+                option_txt_3.setFill(Color.BLACK);
+                option_txt_4.setFill(Color.BLACK);
+                option_txt_5.setFill(Color.BLACK);
+                option_txt_6.setFill(Color.BLACK);
+            }
 
-            case "button_3" -> option_txt_3.setFill(Color.RED);
+            case "button_3" -> {
+                option_txt_1.setFill(Color.BLACK);
+                option_txt_3.setFill(Color.RED);
+                option_txt_2.setFill(Color.BLACK);
+                option_txt_4.setFill(Color.BLACK);
+                option_txt_5.setFill(Color.BLACK);
+                option_txt_6.setFill(Color.BLACK);
+            }
 
-            case "button_4" -> option_txt_4.setFill(Color.RED);
+            case "button_4" -> {
+                option_txt_1.setFill(Color.BLACK);
+                option_txt_4.setFill(Color.RED);
+                option_txt_3.setFill(Color.BLACK);
+                option_txt_2.setFill(Color.BLACK);
+                option_txt_5.setFill(Color.BLACK);
+                option_txt_6.setFill(Color.BLACK);
+            }
 
-            case "button_5" -> option_txt_5.setFill(Color.RED);
+            case "button_5" -> {
+                option_txt_1.setFill(Color.BLACK);
+                option_txt_5.setFill(Color.RED);
+                option_txt_3.setFill(Color.BLACK);
+                option_txt_4.setFill(Color.BLACK);
+                option_txt_5.setFill(Color.BLACK);
+                option_txt_2.setFill(Color.BLACK);
+            }
 
-            case "button_6" -> option_txt_6.setFill(Color.RED);
+            case "button_6" -> {
+                option_txt_1.setFill(Color.BLACK);
+                option_txt_6.setFill(Color.RED);
+                option_txt_3.setFill(Color.BLACK);
+                option_txt_4.setFill(Color.BLACK);
+                option_txt_5.setFill(Color.BLACK);
+                option_txt_2.setFill(Color.BLACK);
+            }
 
             case "cancel" -> System.out.println("cancel!");
 
