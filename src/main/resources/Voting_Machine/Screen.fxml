@@ -34,7 +34,7 @@
          </font>
       </Text>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fa" height="385.0" layoutX="238.0" layoutY="176.0" stroke="BLACK" strokeType="INSIDE" width="201.0" />
-      <Pane id="button_1" fx:id="button_1" layoutX="129.0" layoutY="190.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
+      <Pane id="button_1" fx:id="button_1" layoutX="129.0" layoutY="190.0" onMouseClicked="#buttonClick" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
          <children>
             <Rectangle fx:id="color_1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 1" textAlignment="CENTER" wrappingWidth="76.0">
@@ -44,7 +44,7 @@
             </Text>
          </children>
       </Pane>
-      <Pane id="button_2" fx:id="button_2" layoutX="129.0" layoutY="239.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
+      <Pane id="button_2" fx:id="button_2" layoutX="129.0" layoutY="239.0" onMouseClicked="#buttonClick" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
          <children>
             <Rectangle fx:id="color_2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 2" textAlignment="CENTER" wrappingWidth="76.0">
@@ -54,7 +54,7 @@
             </Text>
          </children>
       </Pane>
-      <Pane id="button_3" fx:id="button_3" layoutX="129.0" layoutY="287.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
+      <Pane id="button_3" fx:id="button_3" layoutX="129.0" layoutY="287.0" onMouseClicked="#buttonClick" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
          <children>
             <Rectangle fx:id="color_3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 3" textAlignment="CENTER" wrappingWidth="76.0">
@@ -64,7 +64,7 @@
             </Text>
          </children>
       </Pane>
-      <Pane id="button_4" fx:id="button_4" layoutX="129.0" layoutY="335.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
+      <Pane id="button_4" fx:id="button_4" layoutX="129.0" layoutY="335.0" onMouseClicked="#buttonClick" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
          <children>
             <Rectangle fx:id="color_4" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 4" textAlignment="CENTER" wrappingWidth="76.0">
@@ -74,7 +74,7 @@
             </Text>
          </children>
       </Pane>
-      <Pane id="button_5" fx:id="button_5" layoutX="129.0" layoutY="384.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
+      <Pane id="button_5" fx:id="button_5" layoutX="129.0" layoutY="384.0" onMouseClicked="#buttonClick" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
          <children>
             <Rectangle fx:id="color_5" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 5" textAlignment="CENTER" wrappingWidth="76.0">
@@ -84,7 +84,7 @@
             </Text>
          </children>
       </Pane>
-      <Pane id="button_6" fx:id="button_6" layoutX="129.0" layoutY="432.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
+      <Pane id="button_6" fx:id="button_6" layoutX="129.0" layoutY="432.0" onMouseClicked="#buttonClick" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="24.0" prefWidth="76.0">
          <children>
             <Rectangle fx:id="color_6" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 6" textAlignment="CENTER" wrappingWidth="76.0">
