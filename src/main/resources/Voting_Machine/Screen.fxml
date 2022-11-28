@@ -94,7 +94,7 @@
             </Text>
          </children>
       </Pane>
-      <Pane id="cancel" fx:id="cancel" layoutX="132.0" layoutY="501.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="28.0" prefWidth="76.0">
+      <Pane id="cancel" fx:id="cancel" layoutX="132.0" layoutY="501.0" onMouseClicked="#buttonClick" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="28.0" prefWidth="76.0">
          <children>
             <Rectangle fx:id="color_7" arcHeight="5.0" arcWidth="5.0" fill="#ff5555" height="24.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Text layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cancel" textAlignment="CENTER" wrappingWidth="76.0">
