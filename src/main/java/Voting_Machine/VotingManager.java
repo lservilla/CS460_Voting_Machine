@@ -16,7 +16,14 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+import java.io.FileNotFoundException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+
 
 
 public class VotingManager extends Application{
@@ -93,6 +100,7 @@ public class VotingManager extends Application{
     public Text option_txt_5;
     @FXML
     public Text option_txt_6;
+
 
 //    Temporary until Voter_ID has functions
     public boolean cardIn = false;
@@ -241,9 +249,24 @@ public class VotingManager extends Application{
 
     }
 
+
+    private int curQuestion = 0;
+    private Ballot ballot;
+    private Path ballotPathPrefix;
+
     @FXML
     public void buttonClick(MouseEvent mouseEvent){
         Node n = (Node)mouseEvent.getSource();
+        ArrayList<String> rawBallot = null;
+
+        this.ballotPathPrefix = Paths.get("ballots");
+        try {
+            rawBallot = Utils.readFile(this.ballotPathPrefix.resolve(Paths.get("V1.txt")).toString());
+        } catch (FileNotFoundException e) {
+
+        }
+        this.ballot = new Ballot(rawBallot);
+
 
         switch (n.getId()){
             case "button_1" -> {
@@ -300,9 +323,46 @@ public class VotingManager extends Application{
                 option_txt_2.setFill(Color.BLACK);
             }
 
-            case "cancel" -> System.out.println("cancel!");
+            case "cancel" -> {
+                option_txt_1.setFill(Color.BLACK);
+                option_txt_2.setFill(Color.BLACK);
+                option_txt_3.setFill(Color.BLACK);
+                option_txt_4.setFill(Color.BLACK);
+                option_txt_5.setFill(Color.BLACK);
+                option_txt_6.setFill(Color.BLACK);
+                System.out.println("cancel!");
+            }
 
-            case "okay" -> System.out.println("okay!");
+
+            case "okay" -> {
+                System.out.println("okay!");
+                curQuestion++;
+                Question curQuestion = ballot.getQuestion(this.curQuestion);
+                List<String> curQuestionOptions = curQuestion.getOptions();
+                String promptText = curQuestion.getPrompt();
+                String questionCategory = curQuestion.getCategory();
+                String curQuestionText = questionCategory + "\n" + promptText;
+                System.out.println(curQuestionOptions);
+                System.out.println(promptText);
+                System.out.println(questionCategory);
+                header.setText(curQuestionText);
+                System.out.println(curQuestionOptions.size());
+                switch (curQuestionOptions.size()) {
+                    case 6 :
+                        option_txt_6.setText(curQuestionOptions.get(5));
+                    case 5 :
+                        option_txt_5.setText(curQuestionOptions.get(4));
+                    case 4 :
+                        option_txt_4.setText(curQuestionOptions.get(3));
+                    case 3 :
+                        option_txt_3.setText(curQuestionOptions.get(2));
+                    case 2 :
+                        option_txt_2.setText(curQuestionOptions.get(1));
+                    case 1 :
+                        option_txt_1.setText(curQuestionOptions.get(0));
+                        break;
+                }
+            }
 
             case "tamper" -> System.out.println("tamper!");
         }

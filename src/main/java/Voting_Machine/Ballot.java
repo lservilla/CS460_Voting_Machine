@@ -1,30 +1,18 @@
 package Voting_Machine;
 
+import java.util.ArrayList;
+
 public class Ballot {
 
+    private  final ArrayList<Question> questions;
 
-    public Ballot(){
 
-    }
+    public Ballot(ArrayList<String> question) { questions = Utils.parseBallot(question); }
 
-    Ballot getBallot(){
-
-        return null;
-    }
-
-    int nrOfProp(){
-
-        return 0;
-    }
-
-    Proposition getProp(int k){
-
-        return null;
-    }
-
-    void recordDecision(int k, int n){
-
-    }
-
+    public ArrayList<Question> getQuestions() { return  questions; }
+    public Question getQuestion(int i) { return  questions.get(i); }
+    public int getLength() { return  questions.size(); }
 
 }
+
+
