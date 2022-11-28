@@ -336,8 +336,28 @@ public class VotingManager extends Application{
 
 
             case "okay" -> {
-                System.out.println(n.getId());
+                //System.out.println(n.getId());
                 if (ID == 1) {
+                    if (option_txt_1.getFill() == Color.RED) {
+                        header.setText("Choose an option. Current machine state is: "+
+                                state.toString() + "\n" + "Check Ballot!!!");
+                    } else if (option_txt_2.getFill() == Color.RED) {
+                        header.setText("Choose an option. Current machine state is: "+
+                                state.toString() + "\n" + "Start Voting!!!");
+                    } else if (option_txt_3.getFill() == Color.RED) {
+                        header.setText("Choose an option. Current machine state is: "+
+                                state.toString() + "\n" + "Start Voting!!!");
+                    } else if (option_txt_4.getFill() == Color.RED)  {
+                        header.setText("Choose an option. Current machine state is: "+
+                                state.toString() + "\n" + "Start Voting!!!");
+                    } else {
+                        header.setText("Choose an option. Current machine state is: "+
+                                state.toString() + "\n" + "Please choose an option!!!");
+                    }
+
+                    System.out.println(option_txt_1.getFill());
+                    System.out.println(option_txt_2.getFill());
+                    System.out.println();
                     //add actions
                 } else if (ID == 2 && status == 2) {
                     //System.out.println("okay!!!!!");
