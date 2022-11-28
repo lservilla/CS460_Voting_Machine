@@ -150,7 +150,7 @@
             <Font size="10.0" />
          </font>
       </Text>
-      <Pane id="tamper" fx:id="tamper" layoutX="1069.0" layoutY="573.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="107.0" prefWidth="111.0">
+      <Pane id="tamper" fx:id="tamper" layoutX="1069.0" layoutY="573.0" onMouseClicked="#buttonClick"  onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" prefHeight="107.0" prefWidth="111.0">
          <children>
             <Circle fx:id="color_9" fill="#d30202" layoutX="56.0" layoutY="54.0" onMouseEntered="#buttonHoverEnter" onMouseExited="#buttonHoverExit" radius="55.0" stroke="BLACK" strokeType="INSIDE" />
             <Text layoutX="15.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TAMPER" textAlignment="CENTER" wrappingWidth="82.7294921875" />
