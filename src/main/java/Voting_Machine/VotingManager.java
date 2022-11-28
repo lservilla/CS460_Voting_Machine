@@ -33,6 +33,7 @@ public class VotingManager extends Application{
         VOTING_PAUSED,
         VOTING_DISABLED,
         FAILURE
+
     }
     Machine_State state = Machine_State.WAITING;
     @FXML
@@ -105,7 +106,6 @@ public class VotingManager extends Application{
 //    Temporary until Voter_ID has functions
     public boolean cardIn = false;
     public int ID = 0; //  0=invalid 1=admin 2=voter
-    public int status = 0; // 0=locked, 1=Pasued, 2=Running
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -159,7 +159,6 @@ public class VotingManager extends Application{
                 option_txt_2.setText("Start Voting");
                 option_txt_3.setText("Pause Voting");
                 option_txt_4.setText("End Voting");
-                status = 2;
             } else if (Objects.equals(n.getId(), "voterCard")){
                 ID = 2;
                 if (state != Machine_State.VOTING_ACTIVE){
@@ -331,35 +330,34 @@ public class VotingManager extends Application{
                 option_txt_4.setFill(Color.BLACK);
                 option_txt_5.setFill(Color.BLACK);
                 option_txt_6.setFill(Color.BLACK);
-                System.out.println("cancel!");
+                //System.out.println("cancel!");
             }
 
 
             case "okay" -> {
-                //System.out.println(n.getId());
+                //change state
                 if (ID == 1) {
                     if (option_txt_1.getFill() == Color.RED) {
                         header.setText("Choose an option. Current machine state is: "+
                                 state.toString() + "\n" + "Check Ballot!!!");
                     } else if (option_txt_2.getFill() == Color.RED) {
+                        state = Machine_State.VOTING_ACTIVE;
                         header.setText("Choose an option. Current machine state is: "+
                                 state.toString() + "\n" + "Start Voting!!!");
                     } else if (option_txt_3.getFill() == Color.RED) {
+                        state = Machine_State.VOTING_PAUSED;
                         header.setText("Choose an option. Current machine state is: "+
-                                state.toString() + "\n" + "Start Voting!!!");
+                                state.toString() + "\n" + "Pause Voting!!!");
                     } else if (option_txt_4.getFill() == Color.RED)  {
+                        state = Machine_State.VOTING_DISABLED;
                         header.setText("Choose an option. Current machine state is: "+
-                                state.toString() + "\n" + "Start Voting!!!");
+                                state.toString() + "\n" + "End Voting!!!");
                     } else {
                         header.setText("Choose an option. Current machine state is: "+
                                 state.toString() + "\n" + "Please choose an option!!!");
                     }
 
-                    System.out.println(option_txt_1.getFill());
-                    System.out.println(option_txt_2.getFill());
-                    System.out.println();
-                    //add actions
-                } else if (ID == 2 && status == 2) {
+                } else if (ID == 2 && state == Machine_State.VOTING_ACTIVE) {
                     //System.out.println("okay!!!!!");
                     curQuestion++;
                     Question curQuestion = ballot.getQuestion(this.curQuestion);
@@ -387,7 +385,7 @@ public class VotingManager extends Application{
                             option_txt_1.setText(curQuestionOptions.get(0));
                             break;
                     }
-                } else if(ID == 2 && status != 2) {
+                } else if(ID == 2 && state != Machine_State.VOTING_ACTIVE) {
                     header.setText("Ask Admin for help!");
                 } else {
                     header.setText("Please Insert Card!");
