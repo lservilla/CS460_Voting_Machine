@@ -165,8 +165,10 @@ public class VotingManager extends Application{
                     header.setText("Voting is inactive right now. Please alert a " +
                             "voting administrator to the machine's condition " +
                             "and move to a new machine. Thank you.");
-                } else {
+                } else if (state == Machine_State.VOTING_ACTIVE){
                     // Need to put code to activate voting sequence here
+                } else {
+                    //add
                 }
 
             } else if (Objects.equals(n.getId(), "fakeCard")){
@@ -258,7 +260,7 @@ public class VotingManager extends Application{
     public void buttonClick(MouseEvent mouseEvent){
         Node n = (Node)mouseEvent.getSource();
         ArrayList<String> rawBallot = null;
-
+        //add V1 and O1
         this.ballotPathPrefix = Paths.get("ballots");
         try {
             rawBallot = Utils.readFile(this.ballotPathPrefix.resolve(Paths.get("V1.txt")).toString());
@@ -336,6 +338,7 @@ public class VotingManager extends Application{
 
             case "okay" -> {
                 //change state
+                System.out.println(this.ballot);
                 if (ID == 1) {
                     if (option_txt_1.getFill() == Color.RED) {
                         header.setText("Choose an option. Current machine state is: "+
@@ -386,13 +389,20 @@ public class VotingManager extends Application{
                             break;
                     }
                 } else if(ID == 2 && state != Machine_State.VOTING_ACTIVE) {
-                    header.setText("Ask Admin for help!");
+                    header.setText("Choose an option. Current machine state is: "+
+                            state.toString() + "\n" + "Ask Admin for help!");
                 } else {
-                    header.setText("Please Insert Card!");
+                    header.setText("Choose an option. Current machine state is: "+
+                            state.toString() + "\n" + "Please Insert Card!");
                 }
             }
 
-            case "tamper" -> System.out.println("tamper!");
+            case "tamper" -> {
+                System.out.println("tamper!");
+                state = Machine_State.FAILURE;
+                header.setText("Choose an option. Current machine state is: "+
+                        state.toString() + "\n" + "Ask Admin for help!");
+            }
         }
     }
 }
