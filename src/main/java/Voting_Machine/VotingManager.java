@@ -105,6 +105,7 @@ public class VotingManager extends Application{
 //    Temporary until Voter_ID has functions
     public boolean cardIn = false;
     public int ID = 0; //  0=invalid 1=admin 2=voter
+    public int status = 0; // 0=locked, 1=Pasued, 2=Running
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -158,7 +159,7 @@ public class VotingManager extends Application{
                 option_txt_2.setText("Start Voting");
                 option_txt_3.setText("Pause Voting");
                 option_txt_4.setText("End Voting");
-
+                status = 2;
             } else if (Objects.equals(n.getId(), "voterCard")){
                 ID = 2;
                 if (state != Machine_State.VOTING_ACTIVE){
@@ -335,32 +336,41 @@ public class VotingManager extends Application{
 
 
             case "okay" -> {
-                System.out.println("okay!");
-                curQuestion++;
-                Question curQuestion = ballot.getQuestion(this.curQuestion);
-                List<String> curQuestionOptions = curQuestion.getOptions();
-                String promptText = curQuestion.getPrompt();
-                String questionCategory = curQuestion.getCategory();
-                String curQuestionText = questionCategory + "\n" + promptText;
-                System.out.println(curQuestionOptions);
-                System.out.println(promptText);
-                System.out.println(questionCategory);
-                header.setText(curQuestionText);
-                System.out.println(curQuestionOptions.size());
-                switch (curQuestionOptions.size()) {
-                    case 6 :
-                        option_txt_6.setText(curQuestionOptions.get(5));
-                    case 5 :
-                        option_txt_5.setText(curQuestionOptions.get(4));
-                    case 4 :
-                        option_txt_4.setText(curQuestionOptions.get(3));
-                    case 3 :
-                        option_txt_3.setText(curQuestionOptions.get(2));
-                    case 2 :
-                        option_txt_2.setText(curQuestionOptions.get(1));
-                    case 1 :
-                        option_txt_1.setText(curQuestionOptions.get(0));
-                        break;
+                System.out.println(n.getId());
+                if (ID == 1) {
+                    //add actions
+                } else if (ID == 2 && status == 2) {
+                    //System.out.println("okay!!!!!");
+                    curQuestion++;
+                    Question curQuestion = ballot.getQuestion(this.curQuestion);
+                    List<String> curQuestionOptions = curQuestion.getOptions();
+                    String promptText = curQuestion.getPrompt();
+                    String questionCategory = curQuestion.getCategory();
+                    String curQuestionText = questionCategory + "\n" + promptText;
+                    //System.out.println(curQuestionOptions);
+                    //System.out.println(promptText);
+                    //System.out.println(questionCategory);
+                    header.setText(curQuestionText);
+                    //System.out.println(curQuestionOptions.size());
+                    switch (curQuestionOptions.size()) {
+                        case 6 :
+                            option_txt_6.setText(curQuestionOptions.get(5));
+                        case 5 :
+                            option_txt_5.setText(curQuestionOptions.get(4));
+                        case 4 :
+                            option_txt_4.setText(curQuestionOptions.get(3));
+                        case 3 :
+                            option_txt_3.setText(curQuestionOptions.get(2));
+                        case 2 :
+                            option_txt_2.setText(curQuestionOptions.get(1));
+                        case 1 :
+                            option_txt_1.setText(curQuestionOptions.get(0));
+                            break;
+                    }
+                } else if(ID == 2 && status != 2) {
+                    header.setText("Ask Admin for help!");
+                } else {
+                    header.setText("Please Insert Card!");
                 }
             }
 
