@@ -19,8 +19,6 @@ public class Utils {
             }
             scanner.close();
         } catch (FileNotFoundException e) {
-//            System.out.println("Ballot not found at path " + pathname);
-//            e.printStackTrace();
             throw e;
         }
         return lines;
@@ -34,12 +32,6 @@ public class Utils {
         String prompt = "";
         ArrayList<String> options = new ArrayList<>();
 
-
-        if (!ballotRaw.get(0).equals("<beginBallot>")) {
-            System.out.println("error in .bml file");
-            return questionsList;
-        }
-
         for (String line : ballotRaw) {
             StringTokenizer tokens = new StringTokenizer(line, "<"); // tokens of one single line
 
@@ -50,40 +42,19 @@ public class Utils {
                 String trimOffTag = tok.substring(tok.indexOf('>') + 1).trim();
 
                 switch (str) {
-                    case "be": // beginBallot case
-                        break;
                     case "qu": // question GOOD
-                        if (trimOffTag.length() > Constants.QUESTION_CHAR_LIMIT) {
-                            System.out.printf("Error in given .bml file: question length exceeds %d characters\n",
-                                    Constants.QUESTION_CHAR_LIMIT);
-                            System.out.println("Given question was: " + trimOffTag);
-                            return questionsList;
-                        }
                         category = trimOffTag;
                         options.clear();
                         break;
                     case "pr": // Prompt case GOOD
-                        if (trimOffTag.length() > Constants.PROMPT_CHAR_LIMIT) {
-                            System.out.printf("Error in given .bml file: prompt length exceeds %d characters\n",
-                                    Constants.PROMPT_CHAR_LIMIT);
-                            System.out.println("Given prompt was: " + trimOffTag);
-                            return questionsList;
-                        }
                         prompt = trimOffTag;
                         break;
                     case "op": // options good
-                        if (trimOffTag.length() > Constants.CHOICE_CHAR_LIMIT) {
-                            System.out.printf("Error in given .bml file: choice length exceeds %d characters\n",
-                                    Constants.CHOICE_CHAR_LIMIT);
-                            System.out.println("Given choice was: " + trimOffTag);
-                            return questionsList;
-                        }
                         options.add(trimOffTag);
                         break;
                     case "\\q":
                         ArrayList<String> tmp = new ArrayList<>(options);
                         questionsList.add(new Question(category, prompt, tmp));
-
                         break;
                 }
             }
