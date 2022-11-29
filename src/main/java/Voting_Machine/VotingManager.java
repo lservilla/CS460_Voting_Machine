@@ -9,11 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -23,7 +20,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
 
 
 public class VotingManager extends Application{
@@ -50,7 +46,7 @@ public class VotingManager extends Application{
     public Pane tamper;
     @FXML
     public Circle color_9;
-//    Buttons for selecting options
+    //    Buttons for selecting options
     @FXML
     public Pane button_1;
     @FXML
@@ -84,7 +80,7 @@ public class VotingManager extends Application{
     @FXML
     public Rectangle color_8;
 
-//    Text that shows the heading, print_out, and options
+    //    Text that shows the heading, print_out, and options
     @FXML
     public Text header;
     @FXML
@@ -103,7 +99,7 @@ public class VotingManager extends Application{
     public Text option_txt_6;
 
 
-//    Temporary until Voter_ID has functions
+    //    Temporary until Voter_ID has functions
     public boolean cardIn = false;
     public int ID = 0; //  0=invalid 1=admin 2=voter
 
@@ -160,13 +156,20 @@ public class VotingManager extends Application{
                 option_txt_3.setText("Pause Voting");
                 option_txt_4.setText("End Voting");
             } else if (Objects.equals(n.getId(), "voterCard")){
+                steps = ballot.getLength()-1;
                 ID = 2;
+                option_txt_1.setFill(Color.BLACK);
+                option_txt_2.setFill(Color.BLACK);
+                option_txt_3.setFill(Color.BLACK);
+                option_txt_4.setFill(Color.BLACK);
+                option_txt_5.setFill(Color.BLACK);
+                option_txt_6.setFill(Color.BLACK);
                 if (state != Machine_State.VOTING_ACTIVE){
                     header.setText("Voting is inactive right now. Please alert a " +
                             "voting administrator to the machine's condition " +
                             "and move to a new machine. Thank you.");
                 } else if (state == Machine_State.VOTING_ACTIVE){
-                    // Need to put code to activate voting sequence here
+                    header.setText("Push Ok Button to star your voting!");
                 } else {
                     //add
                 }
@@ -255,6 +258,9 @@ public class VotingManager extends Application{
     private int curQuestion = 0;
     private Ballot ballot;
     private Path ballotPathPrefix;
+    private int steps = -2;
+
+    private String printOut = "";
 
     @FXML
     public void buttonClick(MouseEvent mouseEvent){
@@ -338,7 +344,6 @@ public class VotingManager extends Application{
 
             case "okay" -> {
                 //change state
-                System.out.println(this.ballot);
                 if (ID == 1) {
                     if (option_txt_1.getFill() == Color.RED) {
                         header.setText("Choose an option. Current machine state is: "+
@@ -360,8 +365,79 @@ public class VotingManager extends Application{
                                 state.toString() + "\n" + "Please choose an option!!!");
                     }
 
-                } else if (ID == 2 && state == Machine_State.VOTING_ACTIVE) {
+                } else if (steps == 0 ) {
+                    if (option_txt_1.getFill() == Color.RED) {
+                        this.printOut = this.printOut + "\n" + option_txt_1.getText();
+                    } else if (option_txt_2.getFill() == Color.RED) {
+                        this.printOut = this.printOut + "\n" + option_txt_2.getText();
+                    } else if (option_txt_3.getFill() == Color.RED) {
+                        this.printOut = this.printOut + "\n" + option_txt_3.getText();
+                    } else if (option_txt_4.getFill() == Color.RED)  {
+                        this.printOut = this.printOut + "\n" + option_txt_4.getText();
+                    } else if (option_txt_5.getFill() == Color.RED) {
+                        this.printOut = this.printOut + "\n" + option_txt_5.getText();
+                    } else if (option_txt_6.getFill() == Color.RED) {
+                        this.printOut = this.printOut + "\n" + option_txt_6.getText();
+                    } else {
+                        steps++;
+                        curQuestion--;
+                    }
+                    option_txt_1.setFill(Color.BLACK);
+                    option_txt_2.setFill(Color.BLACK);
+                    option_txt_3.setFill(Color.BLACK);
+                    option_txt_4.setFill(Color.BLACK);
+                    option_txt_5.setFill(Color.BLACK);
+                    option_txt_6.setFill(Color.BLACK);
+                    header.setText("Finish Voting!!!" + "\n" + "Do you want to print the vote?");
+                    option_txt_1.setText("Yes");
+                    option_txt_2.setText("No");
+                    option_txt_3.setText("");
+                    option_txt_4.setText("");
+                    option_txt_5.setText("");
+                    option_txt_6.setText("");
+                } else if (steps == -1) {
+                    if (option_txt_1.getFill() == Color.RED) {
+                        print_out.setText(printOut);
+                    } 
+                    option_txt_1.setText("");
+                    option_txt_2.setText("");
+                    option_txt_3.setText("");
+                    option_txt_4.setText("");
+                    option_txt_5.setText("");
+                    option_txt_6.setText("");
+                    option_txt_1.setFill(Color.BLACK);
+                    option_txt_2.setFill(Color.BLACK);
+                    option_txt_3.setFill(Color.BLACK);
+                    option_txt_4.setFill(Color.BLACK);
+                    option_txt_5.setFill(Color.BLACK);
+                    option_txt_6.setFill(Color.BLACK);
+                    header.setText("Thank you for your voting!!");
+
+                } else if (ID == 2 && state == Machine_State.VOTING_ACTIVE && steps > 0 )  {
+                    if (option_txt_1.getFill() == Color.RED) {
+                        this.printOut = this.printOut+ "\n" + option_txt_1.getText();
+                    } else if (option_txt_2.getFill() == Color.RED) {
+                        this.printOut = this.printOut + "\n" + option_txt_2.getText();
+                    } else if (option_txt_3.getFill() == Color.RED) {
+                        this.printOut = this.printOut + "\n" + option_txt_3.getText();
+                    } else if (option_txt_4.getFill() == Color.RED)  {
+                        this.printOut = this.printOut + "\n" + option_txt_4.getText();
+                    } else if (option_txt_5.getFill() == Color.RED) {
+                        this.printOut = this.printOut + "\n" + option_txt_5.getText();
+                    } else if (option_txt_6.getFill() == Color.RED) {
+                        this.printOut = this.printOut + "\n" + option_txt_6.getText();
+                    } else {
+                        steps++;
+                        curQuestion--;
+                    }
+
                     //System.out.println("okay!!!!!");
+                    option_txt_1.setFill(Color.BLACK);
+                    option_txt_2.setFill(Color.BLACK);
+                    option_txt_3.setFill(Color.BLACK);
+                    option_txt_4.setFill(Color.BLACK);
+                    option_txt_5.setFill(Color.BLACK);
+                    option_txt_6.setFill(Color.BLACK);
                     curQuestion++;
                     Question curQuestion = ballot.getQuestion(this.curQuestion);
                     List<String> curQuestionOptions = curQuestion.getOptions();
@@ -373,6 +449,13 @@ public class VotingManager extends Application{
                     //System.out.println(questionCategory);
                     header.setText(curQuestionText);
                     //System.out.println(curQuestionOptions.size());
+                    option_txt_1.setText("");
+                    option_txt_2.setText("");
+                    option_txt_3.setText("");
+                    option_txt_4.setText("");
+                    option_txt_5.setText("");
+                    option_txt_6.setText("");
+                    //System.out.println(ballot.getLength());
                     switch (curQuestionOptions.size()) {
                         case 6 :
                             option_txt_6.setText(curQuestionOptions.get(5));
@@ -388,6 +471,7 @@ public class VotingManager extends Application{
                             option_txt_1.setText(curQuestionOptions.get(0));
                             break;
                     }
+                    System.out.println(printOut);
                 } else if(ID == 2 && state != Machine_State.VOTING_ACTIVE) {
                     header.setText("Choose an option. Current machine state is: "+
                             state.toString() + "\n" + "Ask Admin for help!");
@@ -395,6 +479,7 @@ public class VotingManager extends Application{
                     header.setText("Choose an option. Current machine state is: "+
                             state.toString() + "\n" + "Please Insert Card!");
                 }
+                steps--;
             }
 
             case "tamper" -> {
