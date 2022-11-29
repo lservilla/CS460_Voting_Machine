@@ -168,10 +168,8 @@ public class VotingManager extends Application{
                     header.setText("Voting is inactive right now. Please alert a " +
                             "voting administrator to the machine's condition " +
                             "and move to a new machine. Thank you.");
-                } else if (state == Machine_State.VOTING_ACTIVE){
+                } else{
                     header.setText("Push Ok Button to star your voting!");
-                } else {
-                    //add
                 }
 
             } else if (Objects.equals(n.getId(), "fakeCard")){
@@ -398,7 +396,7 @@ public class VotingManager extends Application{
                 } else if (steps == -1) {
                     if (option_txt_1.getFill() == Color.RED) {
                         print_out.setText(printOut);
-                    } 
+                    }
                     option_txt_1.setText("");
                     option_txt_2.setText("");
                     option_txt_3.setText("");
@@ -412,6 +410,10 @@ public class VotingManager extends Application{
                     option_txt_5.setFill(Color.BLACK);
                     option_txt_6.setFill(Color.BLACK);
                     header.setText("Thank you for your voting!!");
+                    //eat card
+                    cardIn = false;
+                    n.setVisible(false);
+                    insertedCard.setVisible(false);
 
                 } else if (ID == 2 && state == Machine_State.VOTING_ACTIVE && steps > 0 )  {
                     if (option_txt_1.getFill() == Color.RED) {
